@@ -1,32 +1,9 @@
 import { useState, useEffect } from "react";
-import Producttwo from "./Component/Producttwo";
+import ProductList from "./Component/ProductList";
 
-// const productlist = [
-//   {
-//     id: 1,
-//     name: 'name 1',
-//     price: 100,
-//     category: 'category 1',
-//     tag: 'Tag 1'
-//   },
-//   {
-//     id: 2,
-//     name: 'name 2',
-//     price: 200,
-//     category: 'category 2',
-//     tag: 'Tag 2'
-//   },
-//   {
-//     id: 3,
-//     name: 'name 3',
-//     price: 100,
-//     category: 'category 3',
-//     tag: 'Tag 3'
-//   },
-// ];
 
 const App = () => {
-  const [Producttwo, Setproducttwo] = useState({});
+  const [Producttwo, Setproducttwo] = useState(null);
 
 
   useEffect(() => {
@@ -37,10 +14,11 @@ const App = () => {
     };
 
     fetchProducts();
-  },[Producttwo]);
+    
+  },[]);
 
 
-
+console.log(Producttwo);
 
 
   return (
@@ -48,8 +26,9 @@ const App = () => {
       <h1 className=" text-center text-blue-500 uppercase text-3xl mb-5">Product List</h1>
     
       {
-        Producttwo.length  ? (
-          <Producttwo products={Producttwo} /> 
+        Producttwo  ? (
+          <ProductList products={Producttwo} />
+          // <p>test</p> 
         ) : (
           <p className="text-bold uppercase text-2xl">Loading  product ...</p>
         )

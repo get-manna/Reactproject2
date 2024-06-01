@@ -18,11 +18,6 @@ const Productone = ({ title, price, category, tag }) => {
   );
 };
 
-Productone.propTypes = {
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired,
-  tag: PropTypes.string,
-};
+
 
 export default Productone;

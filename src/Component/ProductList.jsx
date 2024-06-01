@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import Productone from './Productone';
 
-const Producttwo = ({ Producttwo }) => {
-    console.log(Producttwo.products)
+const ProductList = ({ products }) => {
+    console.log(products.products)
     return (
-        <div className="flex justify-center items-center gap-10">
-            {Producttwo.products.map((product) => (
+        <div className="flex justify-center items-center gap-10 flex-wrap">
+            {products.products.map((product) => (
                 <Productone
                     key={product.id}
                     title={product.name} 
@@ -18,8 +18,6 @@ const Producttwo = ({ Producttwo }) => {
     );
 }
 
-Producttwo.PropTypes = {
-    product:PropTypes.object,
-}
 
-export default Producttwo;
+
+export default ProductList;
