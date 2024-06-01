@@ -13,7 +13,7 @@ const Productone = ({ title, price, category, tag }) => {
           <h2>{category}</h2>
           <p>{tag}</p>
         </div>
-        <button className='text-bold text-white bg-blue-500 uppercase rounded p-2'>Add To Product </button>
+        <button className='text-bold text-white bg-blue-500 uppercase rounded p-2'>Add To Card </button>
     </div>
   );
 };

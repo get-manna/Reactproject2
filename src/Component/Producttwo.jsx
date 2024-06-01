@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import Productone from './Productone';
 
-const Producttwo = ({ products }) => {
+const Producttwo = ({ Producttwo }) => {
+    console.log(Producttwo.products)
     return (
         <div className="flex justify-center items-center gap-10">
-            {products.map((product) => (
+            {Producttwo.products.map((product) => (
                 <Productone
                     key={product.id}
-                    tittle={product.name} 
+                    title={product.name} 
                     price={product.price} 
                     category={product.category} 
                     tag={product.tag}
@@ -17,8 +18,8 @@ const Producttwo = ({ products }) => {
     );
 }
 
-Producttwo.propTypes = {
-    products: PropTypes.array.isRequired,
-};
+Producttwo.PropTypes = {
+    product:PropTypes.object,
+}
 
 export default Producttwo;
