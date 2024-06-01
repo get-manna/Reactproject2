@@ -1,25 +1,14 @@
-import Header from "./Header"
-import Boox from "../Component/Boox"
-import Footer from "./Footer"
+import React from 'react'
+import Header from'./Header'
+import Footer from './Footer';
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
-    <>
-
-    <Header/>
-
-    <Boox/>
-
-    <Boox/>
-
-    <Boox/>
-
-
-
-
-    <Footer/>
-      
-    </>
+    <div>
+       <Header/>
+       <main className="max-w-[1440px] m-auto">{children}</main>
+       <Footer/>
+    </div>
   )
 }
 
