@@ -7,17 +7,18 @@ const ProductList = ({ products }) => {
         <div className="flex justify-center items-center gap-10 flex-wrap">
             {products.products.map((product) => (
                 <Productone
-                    key={product.id}
-                    title={product.name} 
-                    price={product.price} 
-                    category={product.category} 
-                    tag={product.tag}
-                />
+                   key={product.id}
+                   title={product.name} 
+                   price={product.price} 
+                   category={product.category} 
+                   tag={product.tag}
+/>
             ))}
         </div>
     );
 }
 
 
+  
 
 export default ProductList;
