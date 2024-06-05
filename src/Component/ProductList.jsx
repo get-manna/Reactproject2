@@ -2,23 +2,24 @@ import PropTypes from 'prop-types';
 import Productone from './Productone';
 
 const ProductList = ({ products }) => {
-    console.log(products.products)
+    console.log(products);
+
     return (
         <div className="flex justify-center items-center gap-10 flex-wrap">
-            {products.products.map((product) => (
-                <Productone
-                   key={product.id}
-                   title={product.name} 
-                   price={product.price} 
-                   category={product.category} 
-                   tag={product.tag}
-/>
+            {products.products.map((product, index) => (
+                <div  key={index}>
+                    <Productone
+                    img={product.images[0]}
+                        title={product.title}
+                        price={product.price}
+                        category={product.brand}
+                        tag={product.tag}
+                    />
+                </div>
             ))}
         </div>
     );
-}
+};
 
-
-  
 
 export default ProductList;

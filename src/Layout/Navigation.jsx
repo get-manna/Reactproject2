@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 let navigations =[
@@ -31,7 +32,7 @@ const Navigation = () => {
   {
     navigations.map((navbar, index) => (
       <li className='p-2' key={index}>
-        <a className='text-black text-bold uppercase hover:text-blue-700' href={navbar.path}>{navbar.name}</a>
+        <Link className='text-black text-bold uppercase hover:text-blue-700' to={navbar.path}>{navbar.name}</Link>
       </li>
     ))
   }
