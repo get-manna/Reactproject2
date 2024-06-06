@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {   Link } from 'react-router-dom'
 
 
 let navigations =[
@@ -7,19 +7,25 @@ let navigations =[
         name:'Home',
         path:'/Home',
     },
+
+
+
     {
-        name:'About',
-        path:'/About',
+        name:'Service',
+        path:'/Service',
     },
+
+
     {
-        name:'Services',
-        path:'/Services',
-    },
+      name:'Cetagory',
+      path:'/Cetagory',
+  },
+
 
     {
         name:'Contact',
         path:'/Contact',
-    }
+    },
 ]
 
 const Navigation = () => {
@@ -34,6 +40,7 @@ const Navigation = () => {
       <li className='p-2' key={index}>
         <Link className='text-black text-bold uppercase hover:text-blue-700' to={navbar.path}>{navbar.name}</Link>
       </li>
+      
     ))
   }
 </ul>

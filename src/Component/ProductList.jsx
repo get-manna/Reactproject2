@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Productone from './Productone';
+import Productone from '../Component/Productone';
 
 const ProductList = ({ products }) => {
     console.log(products);
@@ -9,7 +9,7 @@ const ProductList = ({ products }) => {
             {products.products.map((product, index) => (
                 <div  key={index}>
                     <Productone
-                    img={product.images[0]}
+                        img={product.images[0]}
                         title={product.title}
                         price={product.price}
                         category={product.brand}

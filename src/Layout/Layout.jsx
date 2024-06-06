@@ -1,18 +1,14 @@
-import React from 'react'
-import Header from'./Header'
-import Footer from './Footer';
+import Footer from "./Footer";
+import Header from "./Header";
 
-
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div>
-       <Header/>
-       <main className="max-w-[1440px] m-auto">{children}
+    <>
+      <Header />
+      <main className="max-w-[1440px] m-auto">{children}</main>
+      <Footer />
+    </>
+  );
+};
 
-       </main>
-       <Footer/>
-    </div>
-  )
-}
-
-export default Layout
+export default Layout;
