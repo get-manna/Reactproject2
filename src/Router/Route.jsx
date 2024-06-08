@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from "../Pages/Home";
 import Service from '../Pages/Service';
-import Cetagory from '../Pages/Cetagory';
 import Contact from '../Pages/Contact';
+import Cetagory from './../Pages/Cetagory';
 
 
 function Router() {
@@ -12,11 +12,8 @@ function Router() {
      <Routes>
         <Route exact path='/Home' element={<Home/>} />
         <Route exact path='/Service' element={<Service/>} />
-        <Route exact path='/Cetagory' element={<Cetagory/>} />
         <Route exact path='/Contact' element={<Contact/>} />
-
-           
-
+        <Route exact path='/Cetagory' element={<Cetagory/>} />
      </Routes>
     </div>
   )

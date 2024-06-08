@@ -10,6 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
+     
 
     };
     
@@ -28,7 +29,7 @@ const fatchproduct = async () => {
 
       setCount(count +1)
 
-  }, 500);
+  }, );
 }
 
   return (

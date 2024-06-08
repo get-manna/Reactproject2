@@ -16,10 +16,12 @@ let navigations =[
     },
 
 
-    {
+   {
+
       name:'Cetagory',
       path:'/Cetagory',
-  },
+   },
+
 
 
     {
