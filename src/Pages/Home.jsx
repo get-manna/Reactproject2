@@ -11,6 +11,12 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
      
+      const response = await fetch("https://dummyjson.com/products");
+      const data = await response.json();
+      Setproducttwo(data);
+
+
+      setCount(count +1)
 
     };
     
@@ -19,29 +25,19 @@ const Home = () => {
     
   },[count]);
 
-const fatchproduct = async () => {
-  setTimeout(async  () => {
-
-      const response = await fetch("https://dummyjson.com/products");
-      const data = await response.json();
-      Setproducttwo(data);
-
-
-      setCount(count +1)
-
-  }, );
-}
 
   return (
-    <div className="max-w-[1440px] my-8">
-      <h1 className=" text-center text-blue-500 uppercase text-3xl mb-5">Product List</h1>
-      <button className="text-2xl font-bold text-blue-500 mb-5 uppercase" onClick={fatchproduct}> View all product </button>
-z      {
+    <div className="max-w-[1440px] my-8 pt-5">
+     
+
+     {
         Producttwo  ? (
           <ProductList products={Producttwo} />
 
         ) : (
-          <p className="text-bold uppercase text-2xl">Loading  product ...</p>
+          <div className="flex h-screen justify-center items-center">
+          <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-20 w-20"> </div>
+        </div>
         )
       }
     </div>

@@ -18,8 +18,8 @@ let navigations =[
 
    {
 
-      name:'Cetagory',
-      path:'/Cetagory',
+      name:'Category',
+      path:'/Category',
    },
 
 
